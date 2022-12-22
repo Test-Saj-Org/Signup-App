@@ -1,0 +1,15 @@
+Creating docker container with different approaches and using specific docker images:
+1) Using dockerfilev6 here we have mapped localdirectory with container filesystem with which we have integrated modified 
+	configration files used to define connection-settings and logs setting:
+	
+	docker run -d -p 8081:80 --name signup-web -v "${pwd}\config:C:\web-app\config" --network netv6 web-signup-imgv6
+	docker run -d --name signup-db --env sa_password=docker4.net!  --network netv6 docker4dotnet/sql-server:2017
+	docker run -it -d --name ref-api -p 8082:80 --network netv6 ref-api-img
+	
+2) Using dockerfilev5 here we copy modified configration files into the container files system while building our app image.
+	docker run -d -p 8081:80 --name signup-webv5 --network section-02 web-signup-imgv5
+	docker run -d --name signup-db --env sa_password=docker4.net! --network section-02 docker4dotnet/sql-server:2017
+
+
+	
+3) Using docker compose file we can write then under same file after building their image
