@@ -21,10 +21,10 @@ terraform {
 
   #3. Terraform State Storage to Azure Storage Container
   backend "azurerm" {
-    resource_group_name   = "azurerm_resource_group.aks_rg.name"
-    storage_account_name  = "var.storage_accname"
-    container_name        = "var.cont_name"
-    key                   = "data.azure_key_vault_secret.storage_Acc_Key.value"
+    resource_group_name   = "vault-group"
+    storage_account_name  = "terrastore2023"
+    container_name        = "tfstatefiles"
+    key                   = "data.azurerm_key_vault_secret.storage_Acc_Key.value"
   }  
 }
 

@@ -15,6 +15,10 @@ variable "sshkvsecret" {
   type    = string
 }
 
+variable "storage_rg_name" {
+  type    = string
+}
+
 variable "clientidkvsecret" {
   type    = string
 }
@@ -62,9 +66,15 @@ variable "cont_name" {
   type    = string
 }
 
-variable "windows_admin_password" {
+variable "win_kv_secret" {
   type    = string
 }
+
+variable "storagesecretkey" {
+  type    = string
+}
+
+
 
 # Specify a valid kubernetes version
 variable "kubernetes_version" {

@@ -19,7 +19,7 @@ keyvault_name = "saj-test-vault"
 
 azure_region = "centralindia"
 
-resource_group = "vault-group"
+resource_group = "demo-aks-grp"
 
 cluster_name = "aks-terraform"
 
@@ -27,7 +27,9 @@ dns_name = "aksdemocluster"
 
 admin_username = "aksuser"
 
-storage_Acc_Key = "storageAccKey"
+storagesecretkey = "storageAccKey"
+
+storage_rg_name = "vault-group"
 
 storage_accname = "terrastore2023"
 
@@ -36,7 +38,7 @@ cont_name = "tfstatefiles"
 kubernetes_version = "1.24.6"
 
 agent_pools = {
-      name            = "Pool01"
+      name            = "nodepool01"
       count           = 2
       vm_size         = "Standard_D2_v2"
       os_disk_size_gb = "30"
