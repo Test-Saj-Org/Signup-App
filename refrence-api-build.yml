@@ -1,0 +1,8 @@
+version: '3.9'
+
+services:
+  reference-data-api:
+    image:  sajidaz1994.azurecr.io/signup-data-api
+    build:
+      context: ./
+      dockerfile: Docker-ref-api
